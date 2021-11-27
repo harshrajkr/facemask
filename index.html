@@ -80,8 +80,8 @@
                 <div class="col-lg-6 col-md-12 col-12 d-flex align-items-center">
                     <div class="about-text">
                         <h1 class="animated animated-text">
-                            <span class="mr-2">Face Mask Detection System using <span class="ai">Artificial
-                                    Intelligence</span></span>
+                            <span class="mr-2">Face Mask Detection System using <span class="ai">Convolution Neural
+                                    Network</span></span>
                         </h1>
 
                         <p>Building a successful product is a challenge. I am highly energetic in user experience
@@ -117,7 +117,7 @@
                         <h2>Project Output</h2>
                     </div>
                     <div class="project-info">
-                        <img src="images/project/project-image01.png" alt="" class="img-fluid">
+                        <img src="images/project-image.png" alt="" class="img-fluid">
                     </div>
 
                 </div>
@@ -136,46 +136,41 @@
                     <div class="timeline">
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2019</span>
+                                <span>DATA</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Project Manager</span><small>Best Studio</small></h3>
-                                <p>Proin ornare non purus ut rutrum. Nulla facilisi. Aliquam laoreet libero ac pharetra
-                                    feugiat. Cras ac fermentum nunc, a faucibus nunc.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2018</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>UX Designer</span><small>Digital Ace</small></h3>
-                                <p>Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim lacus vel iaculis.
+                                <h3><span>Creating Dataset</span><small></small></h3>
+                                <p>Data of people wearing mask and without mask was collected as an input to the model.
+                                    To dense the input even the augmented image were also generated with the help of
+                                    <i>Image Data Generator</i> from <i>Tensorflow Keras Image Preprocessing </i>
                                 </p>
                             </div>
                         </div>
 
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2016</span>
+                                <span>CNN</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>UI Freelancer</h3>
-                                <p>Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor quis pharetra.
-                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                    egestas.</p>
+                                <h3><span>MobileNetV2</span><small>Instead of conventional Convolution</small></h3>
+                                <p>Instead of conventional Convolution in Convolution Neural Network(CNN) the
+                                    Convolution was replaced by MobileNetV2. It consist of two layer <i>1. Base</i> and
+                                    <i>2. Head</i>. The output from the base model becomes the input for the head model
+                                    and then it was Pooled, Flattend and Densed using <i>"relu"</i> activation method.
+                                </p>
                             </div>
                         </div>
 
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2014</span>
+                                <span>T&T</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Junior Designer<small>Crafted Co.</small></h3>
-                                <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum
-                                    eget magna consequat viverra.</p>
+                                <h3><span>Training and Testing</h3>
+                                <p>Then using <i>Adam</i> optimiser model was compiled and the accuracy and loss(Binary
+                                    Crossentropy) were measured. Then this model was trained and tested for the batch
+                                    size of 32 where learning rate was kept as low as <i>1e-4</i>. A Graph of Training
+                                    Loss and Accuracy is shown below.</p>
                             </div>
                         </div>
 
@@ -188,34 +183,36 @@
                     <div class="timeline">
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2017</span>
+                                <span>JSModel</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Mobile Web</span><small>Master Design</small></h3>
-                                <p>Please tell your friends about Tooplate website. That would be very helpful. We need
-                                    your support.</p>
+                                <h3><span>Convertion of Model</span><small> Generation of JS Model</small></h3>
+                                <p>Since <i>.h5</i> model can't be used directly on web. Its JSON version was generated
+                                    using <i>TensoflowJS/tfjs</i> <b>tensorflow_convertor --input_format=keras (path to
+                                        h5 model) (path to js model folder)</b> </p>
                             </div>
                         </div>
 
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2015</span>
+                                <span>UI/UX</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>User Interfaces</span><small>Creative Agency</small></h3>
-                                <p><a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a> is a great
-                                    website to download HTML templates without any login or email.</p>
+                                <h3><span>User Interfaces</span><small>User experience</small></h3>
+                                <p>Then User Interface was developed using HTML, JS and CSS. </p>
                             </div>
                         </div>
 
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2013</span>
+                                <span>BE</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Artwork Design</span><small>New Art School</small></h3>
-                                <p>You can freely use Tooplate's templates for your business or personal sites. You
-                                    cannot redistribute this template without a permission.</p>
+                                <h3><span>BackEnd</span><small></small></h3>
+                                <p>In for web model of face detection <i>blazeface.js</i> was used which is quite fast
+                                    and works on Convolution Neural Network. And the live feed from the primary camera
+                                    of the device is used to capture the frame and the prediction is then applied on the
+                                    caught frame. </p>
                             </div>
                         </div>
 
@@ -227,8 +224,22 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
+    <section class="project py-5" id="#">
+        <div class="container">
 
+            <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Graph of Training Loss and Accuracy</h2>
+                    </div>
+                    <div class="project-info">
+                        <img src="images/plot.png" alt="" class="img-fluid">
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -240,7 +251,7 @@
                     <p class="copyright-text text-center">Copyright &copy; of Academic Project from Chandigarh
                         University</p>
                     <p class="copyright-text text-center">Designed by <a rel="nofollow"
-                            href="https://www.linkedin.com/in/harshrajkr/">Harsh Raj Kumar</a></p>
+                            href="https://www.linkedin.com/in/harshrajkr/">Harsh Raj Kumar</a>(19BCS2632)</p>
                 </div>
 
             </div>
